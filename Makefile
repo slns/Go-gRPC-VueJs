@@ -27,14 +27,14 @@ install:
 		github.com/DATA-DOG/go-sqlmock \
 		github.com/onsi/ginkgo/ginkgo \
 		github.com/onsi/gomega/...  \
-		github.com/SafetyCulture/s12-proto/protobuf/protoc-gen-gogrpcmock 
-#\
-#		github.com/go-sql-driver/mysql \
-#		github.com/pascaldekloe/jwt
+		github.com/SafetyCulture/s12-proto/protobuf/protoc-gen-gogrpcmock \
+		github.com/go-sql-driver/mysql \
+		gopkg.in/go-playground/validator.v9 \
+		golang.org/x/crypto/... \
+		github.com/pascaldekloe/jwt
 	go install github.com/SafetyCulture/s12-proto/protobuf/protoc-gen-gogrpcmock@latest
 	go install -tags 'mysql' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
-#	go install -tags 'mysql' -u github.com/golang-migrate/migrate/cmd/migrate@latest
-#	go install github.com/golang/mock/mockgen@latest
+	go install github.com/golang/mock/mockgen@latest
 
 clean:
 	rm ./pb/**/*.pb.go
