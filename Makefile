@@ -31,6 +31,7 @@ install:
 		github.com/go-sql-driver/mysql \
 		gopkg.in/go-playground/validator.v9 \
 		golang.org/x/crypto/... \
+		github.com/go-xorm/xorm \
 		github.com/pascaldekloe/jwt
 	go install github.com/SafetyCulture/s12-proto/protobuf/protoc-gen-gogrpcmock@latest
 	go install -tags 'mysql' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
